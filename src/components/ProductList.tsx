@@ -5,6 +5,7 @@ import ProductCard from "./ProductCard";
 import { useState } from "react";
 import { fetchProducts } from "@/app/action";
 import Loader from "./Loader";
+import Link from "next/link";
 
 const ProductList = ({ products }: { products: Product[] }) => {
   const [productList, setProductList] = useState<Product[]>(products);
@@ -33,13 +34,14 @@ const ProductList = ({ products }: { products: Product[] }) => {
     <main>
       <section className="mt-2 px-3 pb-2 grid grid-cols-2 gap-2 md:px-12 md:pb-4 md:grid-cols-4 md:gap-4 lg:px-12 lg:pb-4 lg:grid-cols-4 lg:gap-4">
         {productList.map(({ id, thumbnail, title, price, rating }) => (
-          <ProductCard
-            key={id}
-            thumbnail={thumbnail}
-            title={title}
-            price={price}
-            rating={rating}
-          />
+          <Link href={`/product/${id}`} key={id}>
+            <ProductCard
+              thumbnail={thumbnail}
+              title={title}
+              price={price}
+              rating={rating}
+            />
+          </Link>
         ))}
       </section>
       <div className="flex justify-center items-center p-4">

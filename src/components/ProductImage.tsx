@@ -7,6 +7,7 @@ import { useCallback, useState } from "react";
 
 const ProductImage = ({ images }: { images: string[] }) => {
   const [currImg, setCurrImg] = useState<number>(0);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const nextImage = useCallback(() => {
     setCurrImg((prev) => (prev === images.length - 1 ? 0 : prev + 1));
@@ -16,6 +17,10 @@ const ProductImage = ({ images }: { images: string[] }) => {
     setCurrImg((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   }, [images.length]);
 
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
+
   return (
     <section className="mt-4 pb-2 shadow-btm w-full h-56 flex flex-col gap-2 md:flex-row md:w-1/2 md:h-full lg:flex-row lg:w-1/2">
       <div className="relative w-full rounded-lg h-[80%] flex overflow-hidden md:h-full lg:h-full md:w-3/4 lg:w-3/4">
@@ -23,10 +28,15 @@ const ProductImage = ({ images }: { images: string[] }) => {
           src={images[currImg]}
           alt={`Product image ${currImg + 1}`}
           title={`Product image ${currImg + 1}`}
-          className="w-full flex-shrink-0 h-full object-cover"
+          className={`w-full flex-shrink-0 h-full object-cover ${
+            isLoading ? "blur-sm" : ""
+          }`}
           fill={true}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          priority={currImg === 0} // Load first image with priority
+          priority={currImg === 0}
+          placeholder="blur"
+          blurDataURL="../assets/blur-img.png"
+          onLoadingComplete={handleImageLoad}
         />
         <div
           className="absolute bg-white h-8 w-6 md:h-24 md:w-10 lg:h-24 lg:w-10 z-50 flex items-center justify-center left-0 top-1/2 transform -translate-y-1/2 opacity-80 rounded-r-xl cursor-pointer"
