@@ -84,6 +84,6 @@ To run the project locally, follow the instructions below.
    npm run dev
    ```
 
-## Video Link : [click here](https://link-to-your-video-file)
+## Video Link : [click here](https://drive.google.com/file/d/1vY6-LIvVKQGnwplS2MlyzdmwjKVhv17I/view?usp=sharing)
 
-## Live Url : [click here](https://shopiq-assignment-1q49.vercel.app/)
+## Live Url : [click here](https://shopiq-assignment.vercel.app/)
