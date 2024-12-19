@@ -26,7 +26,7 @@ const Carousel = ({ autoScroll = false }: { autoScroll: boolean }) => {
   }, []);
 
   return (
-    <section className="mt-4 px-6 shadow-bottom w-full h-56 flex-col gap-2 md:h-96">
+    <section className="mt-4 px-6 shadow-bottom w-full h-56 flex-col gap-2 md:h-96 md:px-12 lg:px-12">
       <div className="relative w-full rounded-lg h-[80%] flex overflow-hidden">
         <Image
           src={carouselItems[currImg].img}
