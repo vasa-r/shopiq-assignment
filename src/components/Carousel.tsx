@@ -37,13 +37,13 @@ const Carousel = ({ autoScroll = false }: { autoScroll: boolean }) => {
           loading="lazy"
         />
         <div
-          className="absolute bg-white h-8 w-6 md:h-24 md:w-10 lg:h-24 lg:w-10 z-50 flex items-center justify-center left-0 top-1/2 transform -translate-y-1/2 opacity-80 rounded-r-xl cursor-pointer"
+          className="absolute bg-white h-8 w-6 md:h-24 md:w-10 lg:h-24 lg:w-10 z-20 flex items-center justify-center left-0 top-1/2 transform -translate-y-1/2 opacity-80 rounded-r-xl cursor-pointer"
           onClick={previousImage}
         >
           <Image src={Left} alt="previous banner" width={24} height={24} />
         </div>
         <div
-          className="absolute bg-white h-8 w-6 md:h-24 md:w-10 lg:h-24 lg:w-10 z-50 flex items-center justify-center right-0 top-1/2 transform -translate-y-1/2 opacity-80 rounded-l-xl cursor-pointer"
+          className="absolute bg-white h-8 w-6 md:h-24 md:w-10 lg:h-24 lg:w-10 z-20 flex items-center justify-center right-0 top-1/2 transform -translate-y-1/2 opacity-80 rounded-l-xl cursor-pointer"
           onClick={nextImage}
         >
           <Image src={Right} alt="next banner" width={24} height={24} />

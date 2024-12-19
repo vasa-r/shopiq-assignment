@@ -12,7 +12,7 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
-    <nav className="z-50 px-6 py-2 shadow-bottom flex items-center justify-between lg:px-12 lg:py-4 md:px-12 md:py-4">
+    <nav className="z-50 bg-white px-6 py-2 shadow-bottom flex items-center justify-between lg:px-12 lg:py-4 md:px-12 md:py-4">
       <div className="flex items-center gap-3">
         <Image src={Logo} alt="app logo" width={32} height={32} />
         <h1 className="font-logo text-blue-500 text-xl lg:text-3xl">ShopIT</h1>
