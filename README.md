@@ -86,4 +86,4 @@ To run the project locally, follow the instructions below.
 
 ## Video Link : [click here](https://link-to-your-video-file)
 
-## Live Url : [click here](https://link-to-your-video-file)
+## Live Url : [click here](https://shopiq-assignment-1q49.vercel.app/)
