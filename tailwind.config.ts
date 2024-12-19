@@ -11,6 +11,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        greyish: "#f2f1ef",
       },
       fontFamily: {
         poppins: ["Poppins", "serif"],
@@ -21,6 +22,8 @@ export default {
         custom:
           "rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px",
         bottom: "0px 1px 0px 0px rgba(0, 0, 0, 0.1)",
+        btm: "rgba(17, 17, 26, 0.1) 0px 1px 0px",
+        card: "rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset",
       },
       animation: {
         "bounce-in": "bounceIn 0.5s ease-out",
