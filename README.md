@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# E-commerce Website with Product Listing and Product Details Page
+
+This is a fully functional and mobile-optimized e-commerce product listing page built with Next.js, integrated with a mock API. The project implements server-side rendering (SSR), client-side functionality, and a responsive design that works across various screen sizes.
+
+## Features
+
+- **Navbar:** Includes logo, menu options (Home, Categories, About, Contact).
+- **Hero Section:** Carousel showcasing promotional images or banners with smooth transitions.
+- **Product Listing Section:**
+  - 12 products displayed initially.
+  - "Show More" button loads 12 additional products at a time.
+  - Responsive grid layout: 4 products per row on desktop, 2 per row on mobile.
+- **Product Cards:** Includes image, title, price, and ratings.
+- **Product Details Page:**
+  - Image carousel for the product.
+  - Displays title, price, description, ratings, and an "Add to Cart" button.
+- **Server-side Rendering (SSR):** Ensures better SEO and performance for both the listing and individual product detail pages.
+- **Scroll Position Persistence:** When navigating back to the listing page, the scroll position is preserved.
+
+## API Integration
+
+This project uses the following mock API for product data:
+
+- **API Base URL:** [https://dummyjson.com/docs/products](https://dummyjson.com/docs/products)
+
+The API provides information about products, including:
+
+- Product image
+- Title
+- Price
+- Ratings
+
+## Functionality
+
+1. **Show More Button:**
+
+   - Dynamically loads 12 more products every time it is clicked.
+   - The button disappears once all products are loaded.
+
+2. **Error Handling:**
+
+   - Displays loading state when data is being fetched.
+   - Handles API errors and shows a message in case of failure.
+
+3. **SSR (Server-Side Rendering):**
+
+   - All pages (listing and product details) use SSR for optimal SEO and performance.
+
+4. **Mobile Optimization:**
+   - The website is optimized for mobile devices with a responsive design.
 
 ## Getting Started
 
-First, run the development server:
+To run the project locally, follow the instructions below.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Node.js (version 14 or higher)
+- npm (or yarn) installed
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clone the repository to your local machine:
 
-## Learn More
+   ```bash
+   git clone https://github.com/vasa-r/shopiq-assignment
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Navigate to directory:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+    cd shopiq-assignment
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Install dependencies:
 
-## Deploy on Vercel
+   ```bash
+    npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Run App:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm run dev
+   ```
+
+## Video Link : [click here](https://link-to-your-video-file)
+
+## Live Url : [click here](https://link-to-your-video-file)
