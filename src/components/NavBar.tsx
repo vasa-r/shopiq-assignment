@@ -6,20 +6,13 @@ import Logo from "@/assets/logo.png";
 import Close from "@/assets/close.svg";
 import Arrow from "@/assets/arrow-up.svg";
 import { menu } from "@/utils/constants";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [isMounted, setIsMounted] = useState(false);
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
-  if (!isMounted) {
-    return null; // Prevent rendering on the server side
-  }
   return (
-    <div className="px-6 py-2 shadow-bottom flex items-center justify-between lg:px-12 lg:py-4 md:px-12 md:py-4">
+    <nav className="px-6 py-2 shadow-bottom flex items-center justify-between lg:px-12 lg:py-4 md:px-12 md:py-4">
       <div className="flex items-center gap-3">
         <Image src={Logo} alt="app logo" width={32} height={32} />
         <h1 className="font-logo text-blue-500 text-xl lg:text-3xl">ShopIT</h1>
@@ -49,7 +42,7 @@ const NavBar = () => {
                 key={id}
                 className="flex items-center justify-between w-full hover-menu"
               >
-                <Link href={nav} className="hover-menu text-lg font-medium">
+                <Link href={nav} className="text-lg font-medium">
                   {label}
                 </Link>
                 <Image src={Arrow} alt="navigate" width={20} height={20} />
@@ -75,7 +68,7 @@ const NavBar = () => {
       >
         MENU
       </button>
-    </div>
+    </nav>
   );
 };
 

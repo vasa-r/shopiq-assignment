@@ -40,4 +40,5 @@ export default {
     },
   },
   plugins: [],
+  safelist: ["snap-start", "scroll-smooth"],
 } satisfies Config;
