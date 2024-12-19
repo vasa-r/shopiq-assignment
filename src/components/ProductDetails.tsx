@@ -76,7 +76,7 @@ const ProductDetails = ({ product }: { product: Product }) => {
             Add to Cart
           </div>
           <div className="flex-1 rounded-[3px] p-3 bg-blue-500 text-white text-center cursor-pointer">
-            Add to Cart
+            Buy Now
           </div>
         </div>
       </div>
